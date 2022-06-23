@@ -28,7 +28,7 @@ session_start();
                     $result = $access->get_result();
                     if ($result->num_rows > 0){
                         $data = $result -> fetch_assoc();
-                        echo "<p class='reg'> ". $data['name']."</p>";
+                        echo "<div class='greet'><p> ". $data['name']."</p><a href='log_out.php'class='log-out'>Log Out</a> </div>";
                     }
                   
                 } else {
@@ -64,11 +64,7 @@ session_start();
                            <a href="contact.php">Contact Us</a>
                        
                       </li>
-                        <?php 
-                            if(isset($_SESSION['adminid'])) {
-                                echo "<li id='log-out'> <a href='logout.php'>Log Out</a></li>";
-                            }
-                        ?>
+        
                  </ul>
             </div>
         </nav>

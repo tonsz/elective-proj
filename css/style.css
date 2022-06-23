@@ -43,11 +43,13 @@ body {
     margin-right: auto;
 }
 
-.start a {
+.start p {
+    font-size: 1.5rem;
+}
+
+.start .log-in {
     font-size: 1.5rem;
     padding-top: 30px;
-}
-.start .log-in {
     padding: 20px 20px 20px 100px; 
     color: var(--dark-blue);
 }
@@ -55,6 +57,21 @@ body {
     font-size: 1.5rem;
     padding-top: 30px;
     padding: 25px 40px 25px 40px;
+    background-color: var(--dark-blue);  
+    color: var(--light-gray);
+}
+
+.start .greet .log-out {
+    font-size: 0.8rem;
+    color:var(--white);
+    text-decoration: underline;
+    font-weight: 400;
+    
+}
+
+.start .greet {
+    text-align: end;
+    padding: 15px 30px 15px 30px;
     background-color: var(--dark-blue);  
     color: var(--light-gray);
 }
