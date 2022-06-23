@@ -128,7 +128,7 @@ body {
     word-spacing: 2px;
 }
 
-.container .vote-btn {
+.container .home-btn {
     display: block;
     width: 200px;
     height: 50px;
@@ -210,3 +210,158 @@ body {
      margin-left: 35px;
      color: #1b2459;
  }
+
+ /* <------------- for manage and add election as well as new candidate ------------->*/
+
+.election{
+    padding: 20px 0px 20px 40px;
+  }
+  .election .election-title{
+    font-size: 28px;
+    min-width: 100%;
+    margin-right: auto;
+    color: var(--dark-blue);
+    letter-spacing: 2px;
+  }
+  
+  .election .left-sub{
+    font-size: 20px;
+    padding: 10px 250px 20px 31px;
+    color: var(--dark-blue);
+  }
+  
+  .election .right-sub{
+    font-size: 20px;
+    color: var(--dark-blue);
+  }
+  
+  .election .sub{
+    font-size: 20px;
+    padding: 20px 0px 10px 31px;
+    color: var(--dark-blue);
+  }
+  
+  .election .subscript{
+    font-size: 20px;
+    text-align:center;
+    margin-left: 2px;
+    padding: 2px 2px 2px 2px;
+    color: var(--dark-blue);
+  }
+  
+  .election .right-input{
+     margin: 12px 95px 20px 31px;
+     width:315px;
+     border-left:#9b9b9b;
+     border-right: 2px inset;
+     border-bottom: 3px inset var(--light-gray);
+     border-top: solid var(--dark-blue);
+     border-top-width: 10px;
+     padding:10px;
+  }
+  
+  .election .left-input{
+    width:200px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:10px;
+  }
+  
+  .election .input{
+    margin: 12px 0px 20px 31px;
+    width:400px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:10px;
+  }
+  
+  .election .date{
+    margin: 0px 0px 0px 31px;
+    width:150px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:10px;
+  }
+  
+  .election .create-btn{
+     margin: -180px 0px 0px 400px;
+     border-radius: 20%/60%;
+     display:block;
+     height: 40px;
+     width: 150px;
+     background-color: #1b2459;
+     border-color: #1b2459;
+     color: white;
+     font-size: 14px;
+  }
+  
+  .show {
+    display:block;
+  }
+  
+  .hide{
+    display:none;
+  }
+  .election .photocandidate{
+    font-size: 20px;
+    color: var(--dark-blue);
+     margin: -150px 0px 0px 40px;
+  }
+  
+  .election .photoinsert{
+    margin: -290px 0px -700px 400px;
+    border-width: thick;
+    border-color: var(--dark-blue);
+    width:177px;
+    height:177px;
+    float:right;
+  }
+  .election .back-btn{
+    margin: -90px 0px 0px 400px;
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .election .photocap{
+    font-size: 20px;
+    margin-left: 100px;
+    color: var(--dark-blue);
+  }
+  
+  .template {
+      padding: 20px;
+  }
+  .template .picture{
+    margin: 31px 34px 35px 34px;
+    border-width: thick;
+    border-color: var(--dark-blue);
+    width: 100px;
+    height:100px;
+  }
+  .template p {
+      font-size: 24px;
+    
+  }
+  .template .desc {
+    font-size: 16px;
+    min-width: 100%;
+    margin: 100px 34px 35px 31px;
+    margin-right: auto;
+    color: var(--dark-blue);
+    letter-spacing: 2px;
+  }

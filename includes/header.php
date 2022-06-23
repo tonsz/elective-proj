@@ -10,7 +10,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <title>Online Election System | Home</title>
 </head>
 <body id="entire">
@@ -62,15 +62,15 @@ session_start();
                       </li>
                     <?php
                         if(isset($_SESSION['adminid'])) {
-                            echo "<li> <a href='admin-views/manage-elections.php'>Manage Elections</a></li>";
-                            echo "<li> <a href='admin-views/admin-results.php'>View Results</a></li>";
+                            echo "<li> <a href='manage-elections.php'>Manage Elections</a></li>";
+                            echo "<li> <a href='admin-results.php'>View Results</a></li>";
                         } else if (isset($_SESSION['voterid'])){
-                            echo "<li> <a href='voter-views/voting-page.php'>Vote</a></li>";
-                            echo "<li> <a href='voter-views/voter-results.php'>View Results</a></li>";
+                            echo "<li> <a href='voting-page.php'>Vote</a></li>";
+                            echo "<li> <a href='voter-results.php'>View Results</a></li>";
                             
                         } else {
-                            echo "<li><a href='admin_log.php'>Administrator</a></li>";
-                            echo "<li><a href='voter_log.php'>Voter</a></li>";
+                            echo "<li><a id='admin-log'href='admin_log.php'>Administrator</a></li>";
+                            echo "<li><a id='voter-log'href='voter_log.php'>Voter</a></li>";
                         }
 
                     ?>

@@ -7,7 +7,19 @@
                     Every vote counts.
                </h2>
                <p> The Online Election System is a platform for institutions to conduct their own elections or voting event polls. Register, know your election ID and let your choice count. </p>
-               <a href="voter_log.php" class="vote-btn">VOTE NOW</a>
+               <?php
+                    if(isset($_SESSION['adminid'])) {
+                         echo "<a href='admin-views/create-election.php' class='home-btn'>CREATE ELECTIONS</a>";
+
+                    } else if (isset($_SESSION['voterid'])) {
+                         echo "<a href='voter-views/voting-page.php' class='home-btn'>VOTE NOW</a>";
+
+                    } else {
+                         echo "<a href='voter_log.php' class='home-btn'>VOTE NOW</a>";
+                    }
+               ?>
+               
+               
         </div>   
         <style>
           .bg-img {
