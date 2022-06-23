@@ -365,3 +365,182 @@ body {
     color: var(--dark-blue);
     letter-spacing: 2px;
   }
+  
+/* <------------- for help page and contact page ------------->*/
+
+.help {
+   padding: 40px 0px 0px 70px;
+   color: var(--dark-blue);
+} 
+
+.contact {
+   padding: 40px 0px 0px 70px;
+   color: var(--dark-blue);
+}
+
+.subtitle {
+    font-size: 1.7rem;
+    margin-right: auto;
+    color: var(--dark-blue);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.email {
+    font-size: 1.2rem;
+    margin-right: auto;
+	margin-left: 35px;
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.comment {
+	height: auto;
+	font-size: 1.0rem;
+	font-weight: normal;
+	text-align:justify;
+    margin-top: 10px;
+    margin-bottom:25px;
+    width:1000px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding: 10px;
+    
+}
+
+.question {
+    font-size: 1.3rem;
+    margin-right: auto;
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.answer {
+    font-size: 1.0rem;
+    margin-left:30px;
+	margin-right:50px;
+	text-align:justify;
+    color: black;
+    font-weight: 500;
+	font-style: italic;
+    margin-bottom: 20px;
+}
+
+#addQuestBtn {
+	height: 40px;
+    width: 40px;
+	background-color: #B2BCC5;
+	color: #1b2459;
+	border-color: #ffffff;
+    font-size: 1.5rem;
+}
+
+#addQuestion {
+	display: inline;
+    font-size: 1.5rem;
+    margin-right: auto;
+    color: var(--dark-blue);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.labels {
+    font-size: 18 px;
+    font-weight: 400px;
+    padding-left: 35px;
+
+}
+
+.inputs {
+    margin-top: 10px;
+    margin-bottom:25px;
+    margin-left: 35px;
+    width:315px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding: 10px;
+    
+}
+
+.textBox {
+    margin-top: 10px;
+    margin-bottom:25px;
+    margin-left: 35px;
+    width:315px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding: 10px;
+    
+}
+
+.submitButton{
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 14px;
+    margin-top:-150px;
+    margin-left:400px;
+}
+
+.adlabels {
+    font-size: 1.1rem;
+    font-weight: 400px;
+    padding-left: 50px;
+	
+}
+
+.adinputs {
+    margin-top: 10px;
+    margin-bottom:25px;
+    margin-left: 50px;
+    width:315px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding: 10px;
+    
+}
+
+.adtextBox {
+    margin-top: 10px;
+    margin-bottom:25px;
+    margin-left: 50px;
+    width:315px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding: 10px;
+    
+}
+
+.adsubmitButton{
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 1.0rem;
+    margin-top:-150px;
+    margin-left:400px;
+}
