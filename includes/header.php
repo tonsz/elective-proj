@@ -20,7 +20,9 @@ session_start();
            </div>     
            <div class="start">  
                 <?php
+                
                 if(isset($_SESSION['adminid'])) {
+                    // greeting admins
                     require_once 'dbh.inc.php';
                     $access = $conn->prepare("select concat('Hello, ', firstName,' ', lastName, '!') as 'name' from admin_tbl where id = ?");
                     $access->bind_param('i', $_SESSION['adminid']);
@@ -31,7 +33,19 @@ session_start();
                         echo "<div class='greet'><p> ". $data['name']."</p><a href='log_out.php'class='log-out'>Log Out</a> </div>";
                     }
                   
-                } else {
+                } else if(isset($_SESSION['voterid'])){ 
+                    // greeting voters
+                    require_once 'dbh.inc.php';
+                    $access = $conn->prepare("select concat('Hello, ', firstName,' ', lastName, '!') as 'name' from voter_tbl where id = ?");
+                    $access->bind_param('i', $_SESSION['voterid']);
+                    $access->execute();
+                    $result = $access->get_result();
+                    if ($result->num_rows > 0){
+                        $data = $result -> fetch_assoc();
+                        echo "<div class='greet'><p> ". $data['name']."</p><a href='log_out.php'class='log-out'>Log Out</a> </div>";
+                    }
+
+                }else {
                     echo " <a href='voter_log.php'class='log-in'>Log In</a>";
                     echo "<a href='registration.php' class='reg'>Register</a>" ;                                    
 
@@ -48,8 +62,12 @@ session_start();
                       </li>
                     <?php
                         if(isset($_SESSION['adminid'])) {
-                            echo "<li> <a href='manage-elections.php'>Manage Elections</a></li>";
-                            echo "<li> <a href='#'>Results</a></li>";
+                            echo "<li> <a href='admin-views/manage-elections.php'>Manage Elections</a></li>";
+                            echo "<li> <a href='admin-views/admin-results.php'>View Results</a></li>";
+                        } else if (isset($_SESSION['voterid'])){
+                            echo "<li> <a href='voter-views/voting-page.php'>Vote</a></li>";
+                            echo "<li> <a href='voter-views/voter-results.php'>View Results</a></li>";
+                            
                         } else {
                             echo "<li><a href='admin_log.php'>Administrator</a></li>";
                             echo "<li><a href='voter_log.php'>Voter</a></li>";

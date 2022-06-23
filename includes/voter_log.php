@@ -10,11 +10,7 @@
         $password = $_POST['password'];
                 
         // Database
-        $conn = new mysqli ('localhost', 'root', '', 'user_account');
-        if ($conn->connect_error){
-            die ('Connection Failed : ' .$conn->connect_error);
-        }
-        else {
+        require_once 'dbh.inc.php';  
             $access = $conn->prepare("select * from voter_tbl where email = ?");
             $access->bind_param('s', $email);
             $access->execute();
@@ -24,7 +20,10 @@
 
                 //compare the password from data base and from login input.
                 if ($data ['password'] === $password){  
-                    header('Location: voter-home.php');
+                     echo "Login successfully!";
+                     // Store stuff in session variables
+                     $_SESSION['voterid'] = $data['id']; 
+                     header('Location: home.php');
                 }else {
                     $incorrect  = "Incorrect Password!";
                     $error="";
@@ -32,7 +31,7 @@
             }else {
                 $error = "Invalid Email!";
                 $incorrect  ="";}
-        }
+        
     }
 ?>
 
