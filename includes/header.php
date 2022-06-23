@@ -62,8 +62,8 @@ session_start();
                       </li>
                     <?php
                         if(isset($_SESSION['adminid'])) {
-                            echo "<li> <a href='manage-elections.php'>Manage Elections</a></li>";
-                            echo "<li> <a href='admin-results.php'>View Results</a></li>";
+                            echo "<li> <a href='admin_manage_elections.php' id='manage-elec'>Manage Elections</a></li>";
+                            echo "<li> <a href='admin_results.php'>View Results</a></li>";
                         } else if (isset($_SESSION['voterid'])){
                             echo "<li> <a href='voting-page.php'>Vote</a></li>";
                             echo "<li> <a href='voter-results.php'>View Results</a></li>";

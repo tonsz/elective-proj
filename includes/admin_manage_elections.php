@@ -1,6 +1,6 @@
 <?php
 
-include_once '../header.php';
+include_once 'header.php';
 
 ?>
 
@@ -8,7 +8,7 @@ include_once '../header.php';
           <table>
             <tr>
               <td>
-                <a href="new-election.php"><img class = "picture" type = "button" src=".\imgs\addbtn.png">
+                <a href="admin_new_election.php"><img class = "picture" type = "button" src="..\img\addbtn.png">
               </td>
               <td class="desc">
                 <p>Add New Election</p>

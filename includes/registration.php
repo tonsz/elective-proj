@@ -10,18 +10,14 @@
         $password = $_POST['password'];
         $account = $_POST['account'];
 
-        // Database
-        $link = new mysqli ('localhost', 'root', '', 'user_account');
-        if ($link->connect_error){
-            die ('Connection Failed : ' .$link->connect_error);
-        }
-        else {
+        require_once 'dbh.inc.php';
+
             //Check account type for validation
             if ($account === "voter"){
-                $access = $link->prepare("select * from voter_tbl where email = ?");
+                $access = $conn->prepare("select * from voter_tbl where email = ?");
             }
             else if ($account === "creator"){
-                $access = $link->prepare("select * from admin_tbl where email = ?");
+                $access = $conn->prepare("select * from admin_tbl where email = ?");
             }
             // Check existing emails stored in the database,
             $access->bind_param('s', $email);
@@ -35,19 +31,19 @@
             else{
                 //Check account type for storing
                 if ($account === "voter"){
-                    $store = $link->prepare("insert into voter_tbl (firstName, lastName, email, password) values(?,?,?,?)");
+                    $store = $conn->prepare("insert into voter_tbl (firstName, lastName, email, password) values(?,?,?,?)");
                 }
                 else if ($account === "creator"){
-                    $store = $link->prepare("insert into admin_tbl (firstName, lastName, email, password) values(?,?,?,?)");
+                    $store = $conn->prepare("insert into admin_tbl (firstName, lastName, email, password) values(?,?,?,?)");
                 }
                 $store->bind_param("ssss", $firstName, $lastName, $email, $password);
                 $store->execute();
                 $success = "You have successfully created an account!";
                 $error ="";
                 $store->close();
-                $link->close();
+                $conn->close();
             }//storing
-        } //validation
+         //validation
     } //register button
 ?>
 
@@ -58,7 +54,7 @@
     </head>
 
     <body>
-        <img class="bg-img" src="bg.png" alt="Election Hand Voting">
+        <img class="bg-img" src="../img/bg.png" alt="Election Hand Voting">
         <div class="title">
                Online Election System
         </div>     
