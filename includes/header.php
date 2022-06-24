@@ -64,25 +64,22 @@ session_start();
                         if(isset($_SESSION['adminid'])) {
                             echo "<li> <a href='admin_manage_elections.php' id='manage-elec'>Manage Elections</a></li>";
                             echo "<li> <a href='admin_results.php'>View Results</a></li>";
+							echo "<li> <a href='admin-help.php'>Help</a></li>";
+							echo "<li> <a href='admin-contact.php'>Feedback</a></li>";
                         } else if (isset($_SESSION['voterid'])){
                             echo "<li> <a href='voting-page.php'>Vote</a></li>";
                             echo "<li> <a href='voter-results.php'>View Results</a></li>";
-                            
+                            echo "<li> <a href='help.php'>Help</a></li>";
+							echo "<li> <a href='contact.php'>Contact Us</a></li>";
                         } else {
                             echo "<li><a id='admin-log'href='admin_log.php'>Administrator</a></li>";
                             echo "<li><a id='voter-log'href='voter_log.php'>Voter</a></li>";
+							echo "<li> <a href='help.php'>Help</a></li>";
+							echo "<li> <a href='contact.php'>Contact Us</a></li>";
+							
                         }
 
                     ?>
-                     
-                      <li>
-                           <a href="help.php">Help</a>
-                      </li>
-                      <li>
-                           <a href="contact.php">Contact Us</a>
-                       
-                      </li>
-        
                  </ul>
             </div>
         </nav>
