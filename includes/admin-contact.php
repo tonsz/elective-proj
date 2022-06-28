@@ -1,13 +1,9 @@
 <?php
 	include_once 'header.php';
-	$link = new mysqli ('localhost', 'root', '', 'user_account');
-	if ($link->connect_error){
-            die ('Connection Failed : ' .$link->connect_error);
-        }
-    else {	
-		$result = $link->query("select * from contact_tbl");	
-		$link->close();
-	}
+	require_once 'dbh.inc.php';
+	
+		$result = $conn->query("select * from contact_tbl");	
+		$conn->close();
 	
 ?>
 
