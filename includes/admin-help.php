@@ -1,30 +1,22 @@
 <?php
 	include_once 'header.php';
-	$link = new mysqli ('localhost', 'root', '', 'user_account');
     if (isset($_POST['submit'])){
         // Store input values into a variable
         $question = $_POST['question'];
         $answer = $_POST['answer'];
        
         // Database
-       
-        if ($link->connect_error){
-            die ('Connection Failed : ' .$link->connect_error);
-        }
-        else {
-            $store = $link->prepare("insert into help_tbl (question, answer) values(?,?)");
+		require_once 'dbh.inc.php';
+
+            $store = $conn->prepare("insert into help_tbl (question, answer) values(?,?)");
             $store->bind_param("ss", $question, $answer);
             $store->execute();			
 			header("Location: admin-help.php");
         } //storing
-    }
-	if ($link->connect_error){
-            die ('Connection Failed : ' .$link->connect_error);
-        }
-    else {	
-		$result = $link->query("select * from help_tbl");	
-		$link->close();
-	}
+		
+	require_once 'dbh.inc.php';
+		$result = $conn->query("select * from help_tbl");	
+		$conn->close();
 	
 ?>
 
