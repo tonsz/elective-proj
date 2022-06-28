@@ -6,19 +6,16 @@
         $comment = $_POST['comment'];
        
         // Database
-        $link = new mysqli ('localhost', 'root', '', 'user_account');
-        if ($link->connect_error){
-            die ('Connection Failed : ' .$link->connect_error);
-        }
-        else {
-            $store = $link->prepare("insert into contact_tbl (email, comment) values(?,?)");
+        require_once 'dbh.inc.php';
+
+            $store = $conn->prepare("insert into contact_tbl (email, comment) values(?,?)");
             $store->bind_param("ss", $email, $comment);
             $store->execute();
             $success = "Your feedback has been submitted successfully.";
             $store->close();
-            $link->close();
+            $conn->close();
             } //storing
-        }
+        
 ?>
 		<div class="contact"> 
             <div class="subtitle">
