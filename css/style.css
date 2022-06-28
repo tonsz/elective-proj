@@ -278,7 +278,7 @@ body {
     border-bottom: 3px inset var(--light-gray);
     border-top: solid var(--dark-blue);
     border-top-width: 10px;
-    padding:10px;
+    padding:5px;
   }
   
   .election .date{
@@ -311,7 +311,7 @@ body {
   .hide{
     display:none;
   }
-  .election .photocandidate{
+  /* .election .photocandidate{
     font-size: 20px;
     color: var(--dark-blue);
      margin: -150px 0px 0px 40px;
@@ -324,6 +324,25 @@ body {
     width:177px;
     height:177px;
     float:right;
+  } */
+
+  .election .photo-upload {
+    font-size: 15px;
+    padding: 20px 0px 10px 31px;
+    color: var(--dark-blue);
+    
+  }
+  .election .photo-submit {
+     margin-left: 31px;
+     border-radius: 20%/60%;
+     display:block;
+     height: 40px;
+     width: 150px;
+     background-color: #1b2459;
+     border-color: #1b2459;
+     color: white;
+     font-size: 14px;
+    
   }
   .election .back-btn{
     margin: -90px 0px 0px 400px;
@@ -365,7 +384,8 @@ body {
     color: var(--dark-blue);
     letter-spacing: 2px;
   }
-  
+
+
 /* <------------- for help page and contact page ------------->*/
 
 .help {
