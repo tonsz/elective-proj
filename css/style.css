@@ -292,6 +292,28 @@ body {
     padding:10px;
   }
 
+  .election .input-age{
+    margin: 5px 0px 10px 31px;
+    width:100px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:5px;
+  }
+  .election .input-desc {
+    margin: 5px 0px 10px 31px;
+    width:300px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:5px;
+  }
+  
+
   .election .create-btn{
      margin: -180px 0px 0px 400px;
      border-radius: 20%/60%;
@@ -377,7 +399,7 @@ body {
 
   .election .back{
     margin: 0px 0px 100px 70px;
-    length: 91px;
+    width: 91px;
     background-color: #e2e3eb;
     table-layout: fixed;
     width: 1145px;
