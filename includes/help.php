@@ -3,7 +3,7 @@
 	require_once 'dbh.inc.php';	
     
 		$result = $conn->query("select * from help_tbl");	
-		$link->close();
+		$conn->close();
 	
 ?>
 
