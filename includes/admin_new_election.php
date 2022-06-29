@@ -28,6 +28,7 @@ if (isset($_POST['create'])) {
         $store->bind_param("isssii", $e_id, $e_name, $e_start, $e_end, $cand_count, $e_owner);
         $store->execute();
         $success = "Election created!";
+        header('Location: admin_add_candidate.php');
         $error="";
         $store->close();
         $conn->close();
