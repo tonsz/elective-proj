@@ -17,12 +17,12 @@ a {
 }
 
 body {
-    
+
     height: 100vh;
     font-family: "DM Sans", sans-serif;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 /* <---------------- header.php styling --------------------> */
@@ -50,14 +50,14 @@ body {
 .start .log-in {
     font-size: 1.5rem;
     padding-top: 30px;
-    padding: 20px 20px 20px 100px; 
+    padding: 20px 20px 20px 100px;
     color: var(--dark-blue);
 }
 .start .reg {
     font-size: 1.5rem;
     padding-top: 30px;
     padding: 25px 40px 25px 40px;
-    background-color: var(--dark-blue);  
+    background-color: var(--dark-blue);
     color: var(--light-gray);
 }
 
@@ -66,13 +66,13 @@ body {
     color:var(--white);
     text-decoration: underline;
     font-weight: 400;
-    
+
 }
 
 .start .greet {
     text-align: end;
     padding: 15px 30px 15px 30px;
-    background-color: var(--dark-blue);  
+    background-color: var(--dark-blue);
     color: var(--light-gray);
 }
 
@@ -88,16 +88,16 @@ body {
 }
 
 .menu li {
-    
+
     position: relative;
     list-style: none;
-    
+
 }
 
 .menu li a {
     color: var(--dark-blue);
     border: 10px solid transparent;
-    
+
 }
 
 .menu li a:hover {
@@ -144,8 +144,8 @@ body {
 .log-in {
     padding: 40px 0px 0px 70px;
     color: var(--dark-blue);
- } 
- 
+ }
+
  .subtitle {
      font-size: 1.7rem;
      margin-right: auto;
@@ -153,14 +153,14 @@ body {
      font-weight: 500;
      margin-bottom: 20px;
  }
- 
+
  .labels {
      font-size: 18 px;
      font-weight: 400px;
      padding-left: 35px;
- 
+
  }
- 
+
  .inputs {
      margin-top: 10px;
      margin-bottom: 5px;
@@ -174,7 +174,7 @@ body {
      padding: 10px;
      position:flex;
  }
- 
+
  .error {
      position:absolute;
      margin-left: 38px;
@@ -182,7 +182,7 @@ body {
      color: red;
      font-size: 13px;
  }
- 
+
  .incorrectPW {
      position:absolute;
      margin-top:3px;
@@ -190,7 +190,7 @@ body {
      color: red;
      font-size: 13px;
  }
- 
+
  .logButton{
      border-radius: 20%/60%;
      display:block;
@@ -203,7 +203,7 @@ body {
      margin-top:37px;
      margin-left:275px;
  }
- 
+
  .signup{
      font-size:14px;
      margin-top: 35px;
@@ -223,24 +223,24 @@ body {
     color: var(--dark-blue);
     letter-spacing: 2px;
   }
-  
+
   .election .left-sub{
     font-size: 20px;
     padding: 10px 250px 20px 31px;
     color: var(--dark-blue);
   }
-  
+
   .election .right-sub{
     font-size: 20px;
     color: var(--dark-blue);
   }
-  
+
   .election .sub{
     font-size: 20px;
     padding: 20px 0px 10px 31px;
     color: var(--dark-blue);
   }
-  
+
   .election .subscript{
     font-size: 20px;
     text-align:center;
@@ -248,7 +248,7 @@ body {
     padding: 2px 2px 2px 2px;
     color: var(--dark-blue);
   }
-  
+
   .election .right-input{
      margin: 12px 95px 20px 31px;
      width:315px;
@@ -259,7 +259,7 @@ body {
      border-top-width: 10px;
      padding:10px;
   }
-  
+
   .election .left-input{
     width:200px;
     border-left:#9b9b9b;
@@ -269,7 +269,7 @@ body {
     border-top-width: 10px;
     padding:10px;
   }
-  
+
   .election .input{
     margin: 12px 0px 20px 31px;
     width:400px;
@@ -280,7 +280,7 @@ body {
     border-top-width: 10px;
     padding:5px;
   }
-  
+
   .election .date{
     margin: 0px 0px 0px 31px;
     width:150px;
@@ -291,7 +291,7 @@ body {
     border-top-width: 10px;
     padding:10px;
   }
-  
+
   .election .create-btn{
      margin: -180px 0px 0px 400px;
      border-radius: 20%/60%;
@@ -303,11 +303,11 @@ body {
      color: white;
      font-size: 14px;
   }
-  
+
   .show {
     display:block;
   }
-  
+
   .hide{
     display:none;
   }
@@ -316,7 +316,7 @@ body {
     color: var(--dark-blue);
      margin: -150px 0px 0px 40px;
   }
-  
+
   .election .photoinsert{
     margin: -290px 0px -700px 400px;
     border-width: thick;
@@ -355,13 +355,70 @@ body {
     color: white;
     font-size: 14px;
   }
-  
+
   .election .photocap{
     font-size: 20px;
     margin-left: 100px;
     color: var(--dark-blue);
   }
-  
+
+  .election .elec-pic{
+    margin: -30px 0px -30px 31px;
+    width: 200px;
+    height:200px;
+  }
+
+  .election .text{
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 40px 10px 30px;
+    color: var(--dark-blue);
+  }
+
+  .election .back{
+    margin: 0px 0px 100px 70px;
+    length: 91px;
+    background-color: #e2e3eb;
+    table-layout: fixed;
+    width: 1145px;
+  }
+
+
+  .election .textlist{
+    font-size: 20px;
+    text-align: center;
+    padding: 0px 80px 10px 40px;
+    color: var(--dark-blue);
+  }
+
+  .election .e-subtitle{
+    font-size: 20px;
+    padding: 20px 0px 0px 400px;
+    color: var(--dark-blue);
+  }
+
+  .election .next-subtitle{
+    font-size: 20px;
+    padding: 20px 0px 0px 220px;
+    color: var(--dark-blue);
+  }
+
+  .election .spacing{
+    margin-right: 50px;
+  }
+
+  .election .voteButton{
+    margin: 0px 90px 10px 50px;
+    border-radius: 20%/80%;
+    display:block;
+    height: 40px;
+    width: 200px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 14px;
+  }
+
   .template {
       padding: 20px;
   }
@@ -374,7 +431,7 @@ body {
   }
   .template p {
       font-size: 24px;
-    
+
   }
   .template .desc {
     font-size: 16px;
@@ -385,13 +442,12 @@ body {
     letter-spacing: 2px;
   }
 
-
 /* <------------- for help page and contact page ------------->*/
 
 .help {
    padding: 40px 0px 0px 70px;
    color: var(--dark-blue);
-} 
+}
 
 .contact {
    padding: 40px 0px 0px 70px;
@@ -429,7 +485,7 @@ body {
     border-top: solid var(--dark-blue);
     border-top-width: 10px;
     padding: 10px;
-    
+
 }
 
 .question {
@@ -488,7 +544,7 @@ body {
     border-top: solid var(--dark-blue);
     border-top-width: 10px;
     padding: 10px;
-    
+
 }
 
 .textBox {
@@ -502,7 +558,7 @@ body {
     border-top: solid var(--dark-blue);
     border-top-width: 10px;
     padding: 10px;
-    
+
 }
 
 .submitButton{
@@ -522,7 +578,7 @@ body {
     font-size: 1.1rem;
     font-weight: 400px;
     padding-left: 50px;
-	
+
 }
 
 .adinputs {
@@ -536,7 +592,7 @@ body {
     border-top: solid var(--dark-blue);
     border-top-width: 10px;
     padding: 10px;
-    
+
 }
 
 .adtextBox {
@@ -550,7 +606,7 @@ body {
     border-top: solid var(--dark-blue);
     border-top-width: 10px;
     padding: 10px;
-    
+
 }
 
 .adsubmitButton{
@@ -564,4 +620,69 @@ body {
     font-size: 1.0rem;
     margin-top:-150px;
     margin-left:400px;
+}
+
+/* <------------- for voter's results page ------------->*/
+
+.voter-search {
+  padding: 70px 0px 20px 40px;
+  align-self: center;
+}
+
+.voter-search input[type=text] {
+  font-size: 17px;
+  width:200px;
+  border-left:#9b9b9b;
+  border-right: 2px inset;
+  border-bottom: 3px inset var(--light-gray);
+  border-top: solid var(--dark-blue);
+  border-top-width: 10px;
+  padding:10px;
+}
+
+.voter-search button {
+  margin: 0px 0px 0px 20px;
+  border-radius: 20%/60%;
+  display:block;
+  height: 40px;
+  width: 170px;
+  background-color: #1b2459;
+  border-color: #1b2459;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+ .voter-search button:hover {
+  background: #ffffff;
+}
+
+.voter {
+  padding: 50px 0px 0px 0px;
+  align-self: center;
+}
+
+.voter .result-pic{
+  width: 200px;
+  height: 200px;
+  margin: 0px 50px 0px 50px;
+}
+
+.voter .e-name{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0px 0px 0px;
+  color: var(--dark-blue);
+}
+
+.voter .res {
+  font-size: 18px;
+  text-align: center;
+    padding: 20px 0px 20px 0px;
+  color: var(--dark-blue);
+}
+
+.footer {
+  align-self: center;
 }
