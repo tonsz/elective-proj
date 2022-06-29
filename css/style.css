@@ -377,7 +377,7 @@ body {
 
   .election .back{
     margin: 0px 0px 100px 70px;
-    length: 91px;
+    kerning: 91px;
     background-color: #e2e3eb;
     table-layout: fixed;
     width: 1145px;
@@ -442,10 +442,6 @@ body {
     letter-spacing: 2px;
   }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> fd359d6b3beb523db4d0807fe8fdb0d073ce1321
 /* <------------- for help page and contact page ------------->*/
 
 .help {
