@@ -292,6 +292,28 @@ body {
     padding:10px;
   }
 
+  .election .input-age{
+    margin: 5px 0px 10px 31px;
+    width:100px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:5px;
+  }
+  .election .input-desc {
+    margin: 5px 0px 10px 31px;
+    width:300px;
+    border-left:#9b9b9b;
+    border-right: 2px inset;
+    border-bottom: 3px inset var(--light-gray);
+    border-top: solid var(--dark-blue);
+    border-top-width: 10px;
+    padding:5px;
+  }
+
+
   .election .create-btn{
      margin: -180px 0px 0px 400px;
      border-radius: 20%/60%;
@@ -330,7 +352,7 @@ body {
     font-size: 15px;
     padding: 20px 0px 10px 31px;
     color: var(--dark-blue);
-    
+
   }
   .election .photo-submit {
      margin-left: 31px;
@@ -342,7 +364,7 @@ body {
      border-color: #1b2459;
      color: white;
      font-size: 14px;
-    
+
   }
   .election .back-btn{
     margin: -90px 0px 0px 400px;
@@ -377,7 +399,7 @@ body {
 
   .election .back{
     margin: 0px 0px 100px 70px;
-    kerning: 91px;
+    width: 91px;
     background-color: #e2e3eb;
     table-layout: fixed;
     width: 1145px;
@@ -423,7 +445,7 @@ body {
       padding: 20px;
   }
   .template .picture{
-    margin: 31px 34px 35px 34px;
+    margin: 11px 34px 10px 34px;
     border-width: thick;
     border-color: var(--dark-blue);
     width: 100px;
@@ -440,6 +462,25 @@ body {
     margin-right: auto;
     color: var(--dark-blue);
     letter-spacing: 2px;
+  }
+
+  .template .ename {
+    font-size: 25px;
+    margin-right: auto;
+    font-weight: bold;
+    margin: -10px 0px 0px 0px;
+    color: var(--dark-blue);
+    letter-spacing: 2px;
+  }
+
+  .template .edesc {
+    font-size: 16px;
+    min-width: 100%;
+    font-style: italic;
+    padding-top: 2px;
+    padding-left: 40px;
+    color: var(--dark-blue);
+    letter-spacing: 1px;
   }
 
 /* <------------- for help page and contact page ------------->*/

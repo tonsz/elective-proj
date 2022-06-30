@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2022 at 07:08 AM
+-- Generation Time: Jun 29, 2022 at 02:17 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -56,9 +56,18 @@ CREATE TABLE `candidates_tbl` (
   `cand_desc1` varchar(100) NOT NULL,
   `cand_desc2` varchar(100) DEFAULT NULL,
   `cand_desc3` varchar(100) DEFAULT NULL,
-  `cand_image` blob NOT NULL,
-  `cand_election` int(11) NOT NULL
+  `cand_image_path` varchar(255) NOT NULL,
+  `cand_election` int(11) NOT NULL,
+  `cand_votes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `candidates_tbl`
+--
+
+INSERT INTO `candidates_tbl` (`cand_id`, `cand_name`, `cand_age`, `cand_desc1`, `cand_desc2`, `cand_desc3`, `cand_image_path`, `cand_election`, `cand_votes`) VALUES
+(5, 'Calliope', 19, 'A', 'B', 'C', '../uploads/Calliope.jpg', 1999, 0),
+(6, 'Jules', 16, 'H', 'J', 'K', '../uploads/Jules.jpg', 8955, 0);
 
 -- --------------------------------------------------------
 
@@ -100,8 +109,11 @@ CREATE TABLE `elections_tbl` (
 --
 
 INSERT INTO `elections_tbl` (`e_id`, `e_name`, `e_start`, `e_end`, `cand_count`, `e_owner`) VALUES
-(1234, 'Barangay SK Elections', '2022-06-23', '2022-06-30', 2, 3),
-(2578, 'Best Pokemon Names', '2022-06-28', '2022-06-30', 5, 3);
+(0, '', '0000-00-00', '0000-00-00', 0, 3),
+(1999, 'ElectioNNN', '2022-06-29', '2022-07-06', 3, 3),
+(2578, 'Best Pokemon Names', '2022-06-28', '2022-06-30', 5, 3),
+(7777, 'Mushroom', '2022-06-29', '2022-07-06', 3, 3),
+(8955, 'Sample Election', '2022-06-29', '2022-07-06', 5, 3);
 
 -- --------------------------------------------------------
 
@@ -206,7 +218,7 @@ ALTER TABLE `admin_tbl`
 -- AUTO_INCREMENT for table `candidates_tbl`
 --
 ALTER TABLE `candidates_tbl`
-  MODIFY `cand_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `help_tbl`

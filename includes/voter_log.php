@@ -1,4 +1,4 @@
-<?php 
+<?php
     include_once 'header.php';
 
     $error="";
@@ -8,9 +8,9 @@
         //store inputs in the variables
         $email = $_POST['email'];
         $password = $_POST['password'];
-                
+
         // Database
-        require_once 'dbh.inc.php';  
+        require_once 'dbh.inc.php';
             $access = $conn->prepare("select * from voter_tbl where email = ?");
             $access->bind_param('s', $email);
             $access->execute();
@@ -19,10 +19,10 @@
                 $data = $result -> fetch_assoc();   //get the data from the entire row
 
                 //compare the password from data base and from login input.
-                if ($data ['password'] === $password){  
+                if ($data ['password'] === $password){
                      echo "Login successfully!";
                      // Store stuff in session variables
-                     $_SESSION['voterid'] = $data['id']; 
+                     $_SESSION['voterid'] = $data['id'];
                      header('Location: home.php');
                 }else {
                     $incorrect  = "Incorrect Password!";
@@ -31,14 +31,14 @@
             }else {
                 $error = "Invalid Email!";
                 $incorrect  ="";}
-        
+
     }
 ?>
 
-    <div class="log-in"> 
+    <div class="log-in">
             <div class="subtitle">
                 Voter's Log In
-            </div>   
+            </div>
 
             <!-- changed div class name -->
             <div class="form">
@@ -62,8 +62,8 @@
                 <p>Not registered yet? <a href="registration.php">Register here</a>.</p>
             </div>
         </div>
-       
-     
+
+
      <!-- Hihglight navigation bar for voters-->
      <style>
           #voter-log {

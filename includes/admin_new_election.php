@@ -27,6 +27,7 @@ if (isset($_POST['create'])) {
         $store = $conn->prepare("insert into elections_tbl (e_id,e_name,e_start,e_end,cand_count,e_owner) values(?,?,?,?,?,?)");
         $store->bind_param("isssii", $e_id, $e_name, $e_start, $e_end, $cand_count, $e_owner);
         $store->execute();
+        $_SESSION['e_id'] = $e_id; 
         $success = "Election created!";
         header('Location: admin_add_candidate.php');
         $error="";
