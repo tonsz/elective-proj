@@ -482,6 +482,89 @@ body {
     color: var(--dark-blue);
     letter-spacing: 1px;
   }
+  
+  .electionDet {
+	margin-top: 30px;
+    margin-left: 80px;
+  }
+  
+  .electionDet .ename {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dark-blue);
+	margin-bottom: 10px;
+  }
+  
+  .electionDet .elecId {
+	color: white;
+	font-size: 25px;
+	font-weight: normal;
+	text-align:center;
+    width:200px;
+	background-color: var(--dark-blue);
+    padding: 10px;
+	margin-bottom: 15px;
+  }
+  
+  .electionDet .elecDate {
+    font-size: 15px;
+    color: var(--dark-blue);
+  }
+  
+   .electionDet .back-btn{
+    margin-left: 1200px;
+	margin-top: -330px;
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .candTable {
+	width: 50%;
+	margin-top: -90px;
+    margin-left: 450px;	
+  }
+  
+  .candTable .cpic {
+	height: 50%;
+  }
+
+  .candTable .cname {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+	margin-left: -570px;
+  }
+  
+  .candTable .cdesc {
+    font-size: 16px;
+    padding-top: 2px;
+    padding-left: 40px;
+    color: var(--dark-blue);
+    letter-spacing: 1px;
+	margin-bottom: 5px;
+	margin-left: -570px;	
+  }
+  
+  .candTable .desc {
+    font-size: 20px;
+	margin-left: -570px;
+    color: var(--dark-blue);
+    letter-spacing: 2px;
+  }
+  
+  .candTable .picture{
+    border-width: thick;
+    border-color: var(--dark-blue);
+    width: 130px;
+    height:130px;
+  }
 
 /* <------------- for help page and contact page ------------->*/
 
