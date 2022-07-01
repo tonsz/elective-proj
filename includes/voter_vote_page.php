@@ -1,8 +1,19 @@
 <?php
 
-include_once 'header.php';
+  include_once 'header.php';
+	require_once 'dbh.inc.php';
 
-?>
+  $result = $conn->query("select * from candidates_tbl where cand_election = ?");
+  $access->bind_param('i', $_SESSION['adminid']);
+  $access->execute();
+  $result = $access->get_result();
+
+  $data = array();
+  while ($row = $result->fetch_array()){
+    $data[] = $row;
+  }
+
+ ?>
 
 <div class = "election">
     <div class = "election-title">Election Name (ID: 12345)</div><br>
@@ -37,4 +48,3 @@ include_once 'header.php';
       </table>
 
 </div>
-

@@ -312,7 +312,7 @@ body {
     border-top-width: 10px;
     padding:5px;
   }
-  
+
 
   .election .create-btn{
      margin: -180px 0px 0px 400px;
@@ -352,7 +352,7 @@ body {
     font-size: 15px;
     padding: 20px 0px 10px 31px;
     color: var(--dark-blue);
-    
+
   }
   .election .photo-submit {
      margin-left: 31px;
@@ -364,7 +364,7 @@ body {
      border-color: #1b2459;
      color: white;
      font-size: 14px;
-    
+
   }
   .election .back-btn{
     margin: -90px 0px 0px 400px;
@@ -445,7 +445,7 @@ body {
       padding: 20px;
   }
   .template .picture{
-    margin: 31px 34px 35px 34px;
+    margin: 11px 34px 10px 34px;
     border-width: thick;
     border-color: var(--dark-blue);
     width: 100px;
@@ -462,6 +462,25 @@ body {
     margin-right: auto;
     color: var(--dark-blue);
     letter-spacing: 2px;
+  }
+
+  .template .ename {
+    font-size: 25px;
+    margin-right: auto;
+    font-weight: bold;
+    margin: -10px 0px 0px 0px;
+    color: var(--dark-blue);
+    letter-spacing: 2px;
+  }
+
+  .template .edesc {
+    font-size: 16px;
+    min-width: 100%;
+    font-style: italic;
+    padding-top: 2px;
+    padding-left: 40px;
+    color: var(--dark-blue);
+    letter-spacing: 1px;
   }
 
 /* <------------- for help page and contact page ------------->*/
