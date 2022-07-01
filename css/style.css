@@ -512,7 +512,7 @@ body {
   }
   
    .electionDet .back-btn{
-    margin-left: 1200px;
+    margin-left: 1050px;
 	margin-top: -330px;
     border-radius: 20%/60%;
     display:block;
@@ -525,7 +525,7 @@ body {
   }
   
   .candTable {
-	width: 50%;
+	width: 800px;
 	margin-top: -90px;
     margin-left: 450px;	
   }
@@ -539,7 +539,7 @@ body {
     font-weight: bold;
     color: var(--dark-blue);
     margin-bottom: 5px;
-	margin-left: -570px;
+	margin-left: -630px;
   }
   
   .candTable .cdesc {
@@ -549,12 +549,12 @@ body {
     color: var(--dark-blue);
     letter-spacing: 1px;
 	margin-bottom: 5px;
-	margin-left: -570px;	
+	margin-left: -630px;	
   }
   
   .candTable .desc {
     font-size: 20px;
-	margin-left: -570px;
+	margin-left: -630px;
     color: var(--dark-blue);
     letter-spacing: 2px;
   }

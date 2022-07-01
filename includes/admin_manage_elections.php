@@ -17,7 +17,7 @@
           <table>
             <?php foreach ($data as $row): ?>
               <tr>
-                <td><a href="admin_election_details.php"><img class = "picture" type = "button" src="..\img\addbtn.png"></td>
+                <td><a href="admin_election_details.php"><img class = "picture" type = "button" src="..\img\addbtn.png" id=<?php  $_SESSION ['count']=$row['e_id'];?>></td>
                 <td>
                   <p class = "ename"><?php echo $row['e_name'];?></p>
                   <ul class = "edesc">
