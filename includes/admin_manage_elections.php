@@ -11,6 +11,7 @@
   $data = array();
   while ($row = $result->fetch_array()){
     $data[] = $row;
+    
     if (isset($_POST[$row['e_id']])) {
       $_SESSION['e_id'] = $row['e_id'];
       header('Location: admin_election_details.php');
