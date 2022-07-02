@@ -28,6 +28,7 @@
 ?>
 
         <div class="electionDet">
+				<button onclick="window.location.href='admin_manage_elections.php'" class="back-btn">Back</button>
 				<?php foreach ($data as $row): ?>
 				<div class="ename">
 					<?php echo $row['e_name'];?>
@@ -63,7 +64,6 @@
                 </td>
 				</tr>
 			</table>
-			<button onclick="window.location.href='admin_manage_elections.php'" class="back-btn">Back</button>
 		</div>
 
            <!-- para mahighlight ung page sa navigation bar -->
