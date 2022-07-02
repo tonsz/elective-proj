@@ -4,7 +4,7 @@
   require_once 'dbh.inc.php';
 
   $access = $conn->prepare("select * from elections_tbl where e_id = ?");
-  $access->bind_param('i', $_SESSION['count']);
+  $access->bind_param('i', $_SESSION['e_id']);
   $access->execute();
   $e_result = $access->get_result();
 
@@ -14,7 +14,7 @@
   }
 
   $access = $conn->prepare("select * from candidates_tbl where cand_election = ?");
-  $access->bind_param('i', $_SESSION['count']);
+  $access->bind_param('i', $_SESSION['e_id']);
   $access->execute();
   $result = $access->get_result();
 

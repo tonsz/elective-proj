@@ -11,23 +11,39 @@
   $data = array();
   while ($row = $result->fetch_array()){
     $data[] = $row;
+    if (isset($_POST[$row['e_id']])) {
+      $_SESSION['e_id'] = $row['e_id'];
+      header('Location: admin_election_details.php');
+    }
   }
+  
+ 
+  
+
+
 ?>
-        <div class="template">
-          <table>
-            <?php foreach ($data as $row): ?>
-              <tr>
-                <td><a href="admin_election_details.php"><img class = "picture" type = "button" src="..\img\addbtn.png" id=<?php  $_SESSION ['count']=$row['e_id'];?>></td>
-                <td>
-                  <p class = "ename"><?php echo $row['e_name'];?></p>
-                  <ul class = "edesc">
-                      <li><?php echo $row['e_start'] . " - " . $row['e_end'];?></li>
-                      <li><?php echo $row['cand_count'] . " Candidates";?></li>
-                    </ul>
-                </td>
-              </tr>
-            <?php endforeach ?>
-          </div>
+
+<form action="admin_manage_elections.php" method="post">
+  <div class="template">
+    <table>
+      <?php foreach ($data as $row): ?>
+        <tr>
+          <td>
+            <?php echo "<input value='" . $row['e_id'] . "'name='". $row['e_id'] . "'class='picture' type='submit' src='../img/addbtn.png' height='100' width='100'/>"; ?>
+            
+          </td>
+          <td>
+            <p class = "ename"><?php echo $row['e_name'];?></p>
+            <ul class = "edesc">
+                <li><?php echo $row['e_start'] . " - " . $row['e_end'];?></li>
+                <li><?php echo $row['cand_count'] . " Candidates";?></li>
+              </ul>
+          </td>
+      </tr>
+      <?php endforeach ?>
+    </div>
+
+</form>
 
       <div class="template">
             <table>
