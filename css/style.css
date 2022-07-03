@@ -378,6 +378,19 @@ body {
     font-size: 14px;
   }
 
+  .back-btn{
+    margin: 20px 0px 0px 1100px;
+    padding:10px;
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 14px;
+  }
+
   .election .photocap{
     font-size: 20px;
     margin-left: 100px;
@@ -509,19 +522,6 @@ body {
   .electionDet .elecDate {
     font-size: 15px;
     color: var(--dark-blue);
-  }
-  
-   .electionDet .back-btn{
-    margin-left: 1050px;
-	margin-top: -330px;
-    border-radius: 20%/60%;
-    display:block;
-    height: 40px;
-    width: 150px;
-    background-color: #1b2459;
-    border-color: #1b2459;
-    color: white;
-    font-size: 18px;
   }
   
   .candTable {
@@ -809,4 +809,13 @@ body {
 
 .footer {
   align-self: center;
+}
+
+
+.result-img {
+  height: 200px;
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+  position:center;
 }

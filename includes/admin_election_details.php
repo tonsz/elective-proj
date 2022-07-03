@@ -26,6 +26,7 @@
   $conn->close();
 
 ?>
+    <button class="back-btn" onclick="window.location.href='admin_manage_elections.php'" >Back</button>
 
         <div class="electionDet">
 				<button onclick="window.location.href='admin_manage_elections.php'" class="back-btn">Back</button>
@@ -33,13 +34,16 @@
 				<div class="ename">
 					<?php echo $row['e_name'];?>
 				</div>
+
 				<div class="elecId">
 					ID: <?php echo $row['e_id'] ;?>
 				</div>
+
 				<div class="elecDate">
 					<?php echo $row['e_start'] . " - " . $row['e_end'];?>
 				</div>
 				<?php endforeach ?>
+        
 			<table class = "candTable">
 				<?php foreach ($details as $candDet): ?>
 				<tr>
@@ -65,6 +69,7 @@
 				</tr>
 			</table>
 		</div>
+   
 
            <!-- para mahighlight ung page sa navigation bar -->
      <style>

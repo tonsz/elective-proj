@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2022 at 02:17 PM
+-- Generation Time: Jul 02, 2022 at 06:12 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -67,7 +67,15 @@ CREATE TABLE `candidates_tbl` (
 
 INSERT INTO `candidates_tbl` (`cand_id`, `cand_name`, `cand_age`, `cand_desc1`, `cand_desc2`, `cand_desc3`, `cand_image_path`, `cand_election`, `cand_votes`) VALUES
 (5, 'Calliope', 19, 'A', 'B', 'C', '../uploads/Calliope.jpg', 1999, 0),
-(6, 'Jules', 16, 'H', 'J', 'K', '../uploads/Jules.jpg', 8955, 0);
+(6, 'Jules', 16, 'H', 'J', 'K', '../uploads/Jules.jpg', 8955, 0),
+(9, 'Pikachu', 10, 'hello', 'yellow', 'volt', '../uploads/pikachu.jpg', 2578, 0),
+(10, 'Glaceon', 11, 'Blue', 'Pretty', 'cute', '../uploads/glacial.png', 2578, 0),
+(11, 'Jigglypuff', 0, 'Spirit animal/pokemon ni Jaz', 'Pink', 'Ball', '../uploads/jigglypuff.jpg', 2578, 0),
+(12, 'Snorlax', 15, 'Sleeping is life', 'Cutie', 'Mood', '../uploads/Snorlax.jpg', 2578, 0),
+(13, 'Cyndaquil', 19, 'Ang hirap ng name ah', 'Hirap din ng spelling', 'Mukha siyang sad awts', '../uploads/cyndaquil.png', 2578, 0),
+(14, 'Uncle Sam', 58, 'W5l4n6 Th1t1bHa6', 'Mh4LhUPh3T', 'N1C3', '../uploads/uncle.jpg', 1999, 0),
+(16, 'Pedro Calungsod', 17, 'holy', 'saint', 'dapat tularan', '../uploads/saint-pedro-calungsod-image.jpg', 1234, 0),
+(17, 'Lorenzo Ruiz', 42, 'Martyr', 'Saint', 'Amen', '../uploads/st lorenzo ruiz.jpg', 1234, 0);
 
 -- --------------------------------------------------------
 
@@ -109,7 +117,7 @@ CREATE TABLE `elections_tbl` (
 --
 
 INSERT INTO `elections_tbl` (`e_id`, `e_name`, `e_start`, `e_end`, `cand_count`, `e_owner`) VALUES
-(0, '', '0000-00-00', '0000-00-00', 0, 3),
+(1234, 'Saints', '2022-07-02', '2022-07-03', 2, 2),
 (1999, 'ElectioNNN', '2022-06-29', '2022-07-06', 3, 3),
 (2578, 'Best Pokemon Names', '2022-06-28', '2022-06-30', 5, 3),
 (7777, 'Mushroom', '2022-06-29', '2022-07-06', 3, 3),
@@ -218,7 +226,7 @@ ALTER TABLE `admin_tbl`
 -- AUTO_INCREMENT for table `candidates_tbl`
 --
 ALTER TABLE `candidates_tbl`
-  MODIFY `cand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `cand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `help_tbl`
