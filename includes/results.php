@@ -43,7 +43,7 @@ $conn->close();
 <table class = "voter-search">
   <form action="results.php" method = "post">
     <tr>
-      <td><input type="text" placeholder = "Search.." name = "search"></td>
+      <td><input type="text" placeholder = "Election ID" name = "search"></td>
       <td><button name="submit" type="submit"> SHOW RESULTS </button></td>
     </form>
   </tr>
