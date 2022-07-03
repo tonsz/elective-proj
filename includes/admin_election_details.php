@@ -26,10 +26,8 @@
   $conn->close();
 
 ?>
-    <button class="back-btn" onclick="window.location.href='admin_manage_elections.php'" >Back</button>
-
         <div class="electionDet">
-				<button onclick="window.location.href='admin_manage_elections.php'" class="back-btn">Back</button>
+				<button class="back-btn" onclick="window.location.href='admin_manage_elections.php'" >Back</button>
 				<?php foreach ($data as $row): ?>
 				<div class="ename">
 					<?php echo $row['e_name'];?>

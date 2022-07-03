@@ -378,19 +378,6 @@ body {
     font-size: 14px;
   }
 
-  .back-btn{
-    margin: 20px 0px 0px 1100px;
-    padding:10px;
-    border-radius: 20%/60%;
-    display:block;
-    height: 40px;
-    width: 150px;
-    background-color: #1b2459;
-    border-color: #1b2459;
-    color: white;
-    font-size: 14px;
-  }
-
   .election .photocap{
     font-size: 20px;
     margin-left: 100px;
@@ -496,6 +483,19 @@ body {
     letter-spacing: 1px;
   }
   
+  .electionDet .back-btn{
+    margin: -300px 0px 0px 1050px;
+    padding:10px;
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 14px;
+  }
+
   .electionDet {
 	margin-top: 330px;
     margin-left: 80px;
