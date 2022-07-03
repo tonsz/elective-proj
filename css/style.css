@@ -384,6 +384,19 @@ body {
     color: var(--dark-blue);
   }
 
+  .election .cancel-btn{
+    margin: 20px 0px -40px 1100px;
+    padding:10px;
+    border-radius: 20%/60%;
+    display:block;
+    height: 40px;
+    width: 150px;
+    background-color: #1b2459;
+    border-color: #1b2459;
+    color: white;
+    font-size: 14px;
+  }
+
   .election .elec-pic{
     margin: -30px 0px -30px 31px;
     width: 200px;
@@ -397,12 +410,15 @@ body {
     color: var(--dark-blue);
   }
 
+  .election .spacing{
+    margin-left: 50px;
+  }
+
   .election .back{
-    margin: 0px 0px 100px 70px;
-    width: 91px;
     background-color: #e2e3eb;
-    table-layout: fixed;
-    width: 1145px;
+    background-position: center;
+    table-layout: inherit;
+    align-self: center;
   }
 
 
@@ -423,10 +439,6 @@ body {
     font-size: 20px;
     padding: 20px 0px 0px 220px;
     color: var(--dark-blue);
-  }
-
-  .election .spacing{
-    margin-right: 50px;
   }
 
   .election .voteButton{
@@ -497,17 +509,17 @@ body {
   }
 
   .electionDet {
-	margin-top: 330px;
+	margin-top: 0px;
     margin-left: 80px;
   }
-  
+
   .electionDet .ename {
     font-size: 25px;
     font-weight: bold;
     color: var(--dark-blue);
 	margin-bottom: 10px;
   }
-  
+
   .electionDet .elecId {
 	color: white;
 	font-size: 25px;
@@ -518,18 +530,18 @@ body {
     padding: 10px;
 	margin-bottom: 15px;
   }
-  
+
   .electionDet .elecDate {
     font-size: 15px;
     color: var(--dark-blue);
   }
-  
+
   .candTable {
 	width: 800px;
 	margin-top: -90px;
-    margin-left: 450px;	
+    margin-left: 450px;
   }
-  
+
   .candTable .cpic {
 	height: 50%;
   }
@@ -541,7 +553,7 @@ body {
     margin-bottom: 5px;
 	margin-left: -630px;
   }
-  
+
   .candTable .cdesc {
     font-size: 16px;
     padding-top: 2px;
@@ -549,16 +561,16 @@ body {
     color: var(--dark-blue);
     letter-spacing: 1px;
 	margin-bottom: 5px;
-	margin-left: -630px;	
+	margin-left: -630px;
   }
-  
+
   .candTable .desc {
     font-size: 20px;
 	margin-left: -630px;
     color: var(--dark-blue);
     letter-spacing: 2px;
   }
-  
+
   .candTable .picture{
     border-width: thick;
     border-color: var(--dark-blue);
@@ -780,7 +792,43 @@ body {
  .voter-search button:hover {
   background: #ffffff;
 }
+.voter-search .spacee {
+  margin: -100px 0px 20px 40px;
+}
 
+
+.voters {
+  padding: 20px 0px 20px 0px;
+  align-self: center;
+}
+
+.voters input[type=text] {
+  font-size: 17px;
+  width:200px;
+  border-left:#9b9b9b;
+  border-right: 2px inset;
+  border-bottom: 3px inset var(--light-gray);
+  border-top: solid var(--dark-blue);
+  border-top-width: 10px;
+  padding:10px;
+}
+
+.voters button {
+  margin: 0px 0px 0px 20px;
+  border-radius: 20%/60%;
+  display:block;
+  height: 40px;
+  width: 170px;
+  background-color: #1b2459;
+  border-color: #1b2459;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+ .voters button:hover {
+  background: #ffffff;
+}
 .voter {
   padding: 50px 0px 0px 0px;
   align-self: center;

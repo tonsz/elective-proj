@@ -41,7 +41,7 @@
 					<?php echo $row['e_start'] . " - " . $row['e_end'];?>
 				</div>
 				<?php endforeach ?>
-        
+
 			<table class = "candTable">
 				<?php foreach ($details as $candDet): ?>
 				<tr>
@@ -67,7 +67,7 @@
 				</tr>
 			</table>
 		</div>
-   
+
 
            <!-- para mahighlight ung page sa navigation bar -->
      <style>
