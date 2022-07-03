@@ -6,29 +6,6 @@
   include_once 'header.php';
   require_once 'dbh.inc.php';
 
-    if (isset($_POST['submit'])){
-        // Store input values into a variable
-        $e_id = $elec['e_id'];
-        $v_id = $_SESSION['voterid'];
-        $c_id = $elec['cand_id'];
-
-        $access = $conn->prepare("select * from receipt_tbl where e_id = ? AND v_id = ? ");
-        $access->bind_param('ii', $_SESSION['e_id'], $_SESSION['voterid']);
-        $access->execute();
-        $fetched = $access->get_result();
-
-    if ($fetched->num_rows == 1){
-      $error = "You have already voted.";
-      $success = "";
-    }else{
-      $store = $conn->prepare("insert into admin_tbl (e_id, v_id, c_id) values(?,?,?)");
-      $store->bind_param("iii", $e_id, $v_id, $c_id);
-      $store->execute();
-      $success = "You have successfully casted your vote!";
-      $error ="";
-      $store->close();
-    }
-  }
 
   $access = $conn->prepare("select * from elections_tbl, candidates_tbl where e_id = ? AND cand_election = ?");
   $access->bind_param('ii', $_SESSION['e_id'], $_SESSION['e_id']);
@@ -57,8 +34,40 @@
 
   $details = array();
   while ($row = $result->fetch_array()){
-    $details[] = $row;
-  }
+
+    if (isset($_POST[$row['cand_id']])){
+      echo "TEEEEEEEEEHHHHH";
+      $e_id = $row['cand_election'];
+      $v_id = $_SESSION['voterid'];
+      $c_id = $row['cand_id'];
+
+      $access = $conn->prepare("select * from receipt_tbl where e_id = ? AND v_id = ? ");
+      $access->bind_param('ii', $_SESSION['e_id'], $_SESSION['voterid']);
+      $access->execute();
+      $fetched = $access->get_result();
+
+      if ($fetched->num_rows == 1){
+        $error = "You have already voted.";
+        $success = "";
+      }else{
+        $store = $conn->prepare("insert into receipt_tbl (e_id, v_id, c_id) values(?,?,?)");
+        $store->bind_param("iii", $e_id, $v_id, $c_id);
+        $store->execute();
+        $success = "You have successfully casted your vote!";
+        $error ="";
+        $store->close();
+
+        $sum = $row['cand_votes'] + 1;
+        $access = $conn->prepare("update candidates_tbl set cand_votes = $sum where cand_election = $_SESSION[e_id]");
+        $access->bind_param('ii', $_SESSION['e_id'], $_SESSION['voterid']);
+        $access->execute();
+        $res = $access->get_result();
+        $res->close();
+      }
+    }
+        $details[] = $row;
+    }
+
 
   $conn->close();
 
@@ -69,7 +78,8 @@
     <form action="voter_vote.php" method = "post">
     <?php foreach ($data as $elec): ?>
     <div class = "election-title">
-      <?php echo $elec['e_name'] . " (ID: " . $elec['e_id'] .")";?></div><br>
+      <?php echo $elec['e_name'] . " (ID: ";?>
+      <?php echo "<input value='" . $elec['e_id'] . "' name ='".$elec['e_id'] . "' class = 'election-title' type = 'number' />";?></div>
   <?php endforeach ?>
 
     <table>
@@ -94,6 +104,7 @@
             </ul>
           </td>
           <td class = "back">
+               <?php echo "<input value='" . $det['cand_id'] . "' name='submit'". "class = 'voteButton' type='submit' />";?>
                <button name = "submit" type = "submit" class="voteButton">VOTE</button>
 
              </form>

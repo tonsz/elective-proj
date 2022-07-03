@@ -15,19 +15,10 @@ if (isset($_POST['create'])) {
 
     require_once 'dbh.inc.php';
     // Check if election ID already exists
-    $access = $conn->prepare("select * from elections_tbl where e_id = ?");
-    $access->bind_param('i', $e_id);
-    $access->execute();
-    $check = $access->get_result();
-
-    if ($check->num_rows > 0) { // If it exists
-        $error="Election ID already exists. Pick another one.";
-        $success="";
-    } else { // Store election in elections_tbl 
         $store = $conn->prepare("insert into elections_tbl (e_id,e_name,e_start,e_end,cand_count,e_owner) values(?,?,?,?,?,?)");
         $store->bind_param("isssii", $e_id, $e_name, $e_start, $e_end, $cand_count, $e_owner);
         $store->execute();
-        $_SESSION['e_id'] = $e_id; 
+        $_SESSION['e_id'] = $e_id;
         $success = "Election created!";
         header('Location: admin_add_candidate.php');
         $error="";
@@ -35,7 +26,7 @@ if (isset($_POST['create'])) {
         $conn->close();
 
     }
-  
+
 
 }
 
@@ -68,7 +59,7 @@ if (isset($_POST['create'])) {
           <input class = "create-btn" type="submit" name="create" value="CREATE">
         </form>
         <button onclick="window.location.href='admin_manage_elections.php'" class="back-btn">CANCEL</button>
-        
+
         </td>
       </tr>
     </table>

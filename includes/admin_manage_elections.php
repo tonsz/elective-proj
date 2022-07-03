@@ -11,16 +11,12 @@
   $data = array();
   while ($row = $result->fetch_array()){
     $data[] = $row;
-    
+
     if (isset($_POST[$row['e_id']])) {
       $_SESSION['e_id'] = $row['e_id'];
       header('Location: admin_election_details.php');
     }
   }
-  
- 
-  
-
 
 ?>
 
@@ -31,7 +27,7 @@
         <tr>
           <td>
             <?php echo "<input value='" . $row['e_id'] . "'name='". $row['e_id'] . "'class='picture' type='submit' src='../img/addbtn.png' height='100' width='100'/>"; ?>
-            
+
           </td>
           <td>
             <p class = "ename"><?php echo $row['e_name'];?></p>
