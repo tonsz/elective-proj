@@ -4,9 +4,21 @@
 
       $_SESSION['e_id']="";
 
+      // getting input of election ID, store it in session e_id 
       if (isset($_POST['submit'])) {
         $_SESSION['e_id'] = $_POST['search'];
         header('Location: voter_vote.php');
+      }
+
+      // check receipt_tbl if candidate had already voted for this election
+      $access = $conn->prepare("select * from receipt_tbl where e_id = ? AND v_id = ? ");
+      $access->bind_param('ii', $_SESSION['e_id'], $_SESSION['voterid']);
+      $access->execute();
+      $fetched = $access->get_result();
+
+      if ($fetched->num_rows == 1){ // if yes then set vote_status to voted
+        $_SESSION['vote_status'] = "voted";
+
       }
 
       $conn->close();
