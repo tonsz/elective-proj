@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2022 at 11:00 AM
+-- Generation Time: Jul 07, 2022 at 07:45 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -86,9 +86,9 @@ CREATE TABLE `contact_tbl` (
 --
 
 INSERT INTO `contact_tbl` (`email`, `comment`) VALUES
-('hello@gmail.com', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).'),
-('taylorswift@gmail.com', '“To me, Fearless is not the absense of fear. It\'s not being completely unafraid. To me, Fearless is having fears. Fearless is having doubts. Lots of them. To me, Fearless is living in spite of those things that scare you to death.”\r\n'),
-('trytry@gmail.com', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.');
+('hello@gmail.com', 'How can I vote?'),
+('taylorswift@gmail.com', 'Once a voter has submitted their vote, may they change their vote?'),
+('trytry@gmail.com', 'How can I see the result of the election?');
 
 -- --------------------------------------------------------
 
@@ -132,9 +132,10 @@ CREATE TABLE `help_tbl` (
 --
 
 INSERT INTO `help_tbl` (`id`, `question`, `answer`) VALUES
-(1, 'How do I vote?', 'Dunno'),
-(2, 'How to manage your account?', 'Idk'),
-(3, 'How to manage your account?', 'I don\'t know');
+(1, 'How can I create an account?', 'Tap register in the top right of the Online Election System. Then, enter your first name and last name. Also, enter your email, and choose a password. Select \"I want to vote for election\" if you are a voter. If you are an administrator, select \"I want to create my own election.\" Tap Sign Up.'),
+(2, 'How can I vote?', 'After logging into your account, you will proceed to the voter\'s home page. Enter your election ID. Tap the button that was placed beside your chosen candidate.'),
+(3, 'How can I see the result of the election?', 'Tap view result on the navigation bar of the Online Election System. Enter your election ID and tap view result. It will show the number of votes for each candidate of an election.'),
+(4, 'Once a voter has submitted their vote, may they change their vote?', 'No. Once a person has voted, their vote is final. If they try to change their vote for a specific election, it will show that they have already voted for that election.');
 
 -- --------------------------------------------------------
 
@@ -255,7 +256,7 @@ ALTER TABLE `candidates_tbl`
 -- AUTO_INCREMENT for table `help_tbl`
 --
 ALTER TABLE `help_tbl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `receipt_tbl`

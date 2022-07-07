@@ -625,7 +625,7 @@ body {
 }
 
 .question {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-right: auto;
     color: var(--dark-blue);
     font-weight: bold;
@@ -633,9 +633,9 @@ body {
 }
 
 .answer {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     margin-left:30px;
-	margin-right:50px;
+	margin-right:80px;
 	text-align:justify;
     color: black;
     font-weight: 500;
