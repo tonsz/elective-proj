@@ -545,8 +545,8 @@ body {
     font-size: 14px;
   }
 
-  .electionDet {
-	margin-top: 0px;
+    .electionDet {
+	margin-top: 330px;
     margin-left: 80px;
   }
 
@@ -574,10 +574,9 @@ body {
   }
 
   .candTable {
-
 	width: 800px;
 	margin-top: -90px;
-    margin-left: 450px;
+    margin-left: 450px;	
   }
 
   .candTable .cpic {
@@ -599,7 +598,7 @@ body {
     color: var(--dark-blue);
     letter-spacing: 1px;
 	margin-bottom: 5px;
-	margin-left: -630px;
+	margin-left: -630px;	
   }
 
   .candTable .desc {
