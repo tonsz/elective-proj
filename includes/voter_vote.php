@@ -38,7 +38,7 @@
 
 
 
-    // if the any of the vote buttons are clicked
+    // if the any of the vote buttons are clicke
     // each one of them is identifiable by original cand_id in name='' attribute
     if (isset($_POST[$row['cand_id']])){
       $e_id = $row['cand_election'];
